@@ -1,0 +1,10 @@
+import processing.core.*;
+
+int plat;
+int krone;
+public class game
+
+public void setup() {
+plat = 1;
+krone =2;
+}
