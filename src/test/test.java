@@ -1,5 +1,6 @@
 package test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -43,9 +44,18 @@ public class test {
         max = 2;
         min = 1;
 
-        result = (int) (Math.random() * (max - min + 1) + min);
+        int total1 = 0;
 
-        assertTrue(gæt == result);
+
+        for (int i = 0; i < 20000; i++){
+            result = (int) (Math.random() * (max - min + 1) + min);
+            
+            if (result == 1){
+                total1++;
+            }
+        }
+
+        assertEquals(10000, total1, 500);
     }
 
 
