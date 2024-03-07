@@ -1,0 +1,30 @@
+import processing.core.*;
+java.util.Random*;
+java.util.Scanner*;
+
+int plat;
+int krone;
+int min;
+int max;
+public class game {
+
+public void setup() {
+Scanner scanner = new Scanner(System.in);
+plat = 1;
+krone =2;
+min =1;
+max =2;
+}
+public void draw() {
+    System.out.print("Gæt på plat eller krone: ");
+        String gæt = scanner.nextLine().toLowerCase();
+    
+    Math.floor(Math.random() *(max - min + 1) + min);
+    if (gæt = Math.random) {
+        System out.println ("Tillykke, du gættede rigtigt");
+    }
+    else {
+        System out.println ("Det var desværre forkert");
+    }
+}
+}
