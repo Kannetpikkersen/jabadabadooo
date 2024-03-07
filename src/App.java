@@ -1,15 +1,18 @@
 import java.util.Scanner;
 
 import java.util.Random;
-        int guess;
-        int result;
-        int max;
-        int min;
-        int plat;
-        int krone;
-        int gæt;
+
+int guess;
+int result;
+int max;
+int min;
+int plat;
+int krone;
+int gæt;
 
 public class App {
+
+    
 
     public void setup(){
         plat = 1;
@@ -20,15 +23,24 @@ public class App {
 
     }
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
 
-        System.out.println("Gæt på plat eller krone")
+        int result = 0;
+        
+        int max = 2;
+        int min = 1;
 
-        Scanner gæt = new Scanner(System.in);
+        System.out.println("Gæt på plat eller krone");
 
-        result = (int) (Math.random() * (max - min + 1) + min);
+        String resultString = result == 1 ? "plat" : "krone";
 
-        if (guess == result){
+        Scanner guessScenner = new Scanner(System.in);
+
+        String guess = guessScenner.nextLine();
+
+        guessScenner.close();
+
+        if (guess.equals(resultString)){
             System.out.println("Du gættede rigtigt");
         }
         else{
