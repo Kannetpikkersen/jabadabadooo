@@ -6,6 +6,10 @@ import org.junit.Test;
 
 import processing.core.PVector;
 
+import java.util.Scanner;
+
+import java.util.Random;
+
 public class test {
     
     public test(){
@@ -27,8 +31,35 @@ public class test {
 
         //asserts
         assertTrue(p.x == 1);
-
-
     }
 
+    @Test
+    public void randomtest(){
+        int gæt;
+        int result;
+        int max;
+        int min;
+        gæt = 1;
+        max = 2;
+        min = 1;
+
+        result = (int) (Math.random() * (max - min + 1) + min);
+
+        assertTrue(gæt == result);
+    }
+
+
+    @Test
+    public void guesstest(){
+    int gæt;
+    int result;
+    gæt = 1;
+    result =1;
+    if (gæt == result){
+        assertTrue(true);
+    }
+    else{
+        assertTrue(false);
+    }
+}
 }

@@ -1,24 +1,39 @@
-import processing.core.*;
+import java.util.Scanner;
 
-public class App extends PApplet {
+import java.util.Random;
+        int guess;
+        int result;
+        int max;
+        int min;
+        int plat;
+        int krone;
+        int gæt;
 
-    int c;
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-        App myApp = new App();
-        myApp.runSketch();
-    }
-
-    public void settings(){
-        size(600,400);
-    }
+public class App {
 
     public void setup(){
-        c = color(255,0,0);
+        plat = 1;
+        krone = 2;
+        max = 2;
+        min = 1;
+        guess = gæt;
 
     }
 
-    public void draw(){
-        background(c);
+    public void main(String[] args) {
+
+        System.out.println("Gæt på plat eller krone")
+
+        Scanner gæt = new Scanner(System.in);
+
+        result = (int) (Math.random() * (max - min + 1) + min);
+
+        if (guess == result){
+            System.out.println("Du gættede rigtigt");
+        }
+        else{
+            System.out.println("Du gættede forkert");
+        }
+
     }
 }
